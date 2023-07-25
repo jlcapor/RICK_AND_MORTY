@@ -1,14 +1,14 @@
-const Card = (props) => {
-  const { name, status, species, gender, origin, image, onClose } = props;
+const Card = (props) => { // Componente funcional
+  const {id,  name, status, species, gender, origin, image, onClose } = props;
   return (
     <div>
-      <img src={image} alt="" />
+      <button onClick={() => onClose(id)}>Cerrar</button>
       <h2>Name: {name}</h2>
       <h2>Status: {status}</h2>
       <h2>Species: {species}</h2>
       <h2>Gender: {gender}</h2>
       <h2>Origin: {origin}</h2>
-      <button onClick={onClose}>Cerrar</button>
+      <img src={image} alt="" />
     </div>
   );
 };
